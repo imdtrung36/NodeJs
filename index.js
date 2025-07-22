@@ -38,7 +38,7 @@ app.put("/todos/:id", async (req, res) => {
 });
 
 //DELETE xóa 1 todo
-app.delete("/todo/:id", async (req, res) => {
+app.delete("/todos/:id", async (req, res) => {
     await Todo.findByIdAndDelete(req.params.id);
     res.json({ success: true });
 })
